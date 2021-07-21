@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        android:id="@+id/movie_progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints">
+    </ProgressBar>
+
+
+    <EditText
+        android:id="@+id/search_movie_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    </EditText>
+
+    <Button
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/search_movie_name"
+        android:id="@+id/search_btn"
+        android:text="Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_margin="40dp"
+        android:layout_below="@+id/search_btn"
+        android:id="@+id/empty_movie_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    </TextView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/search_btn"
+        android:visibility="gone"
+        android:id="@+id/movie_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
